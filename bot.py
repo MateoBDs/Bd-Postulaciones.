@@ -135,7 +135,7 @@ async def on_ready():
 async def setup(ctx):
     global setup_message_id
     await ctx.message.delete()
-    embed = discord.Embed(title="BD Postulaciones", description="Haz clic abajo para postularte como Staff.", color=discord.Color.blue())
+    embed = discord.Embed(title="BD Postulaciones", description="¡Bienvenido al sistema de Postulaciones BD! Pulsa postularse para staff para postularte exitosamente.", color=discord.Color.blue())
     embed.set_footer(text="Estado: " + ("Abiertas" if applications_open else "Cerradas"))
     view = ApplicationView()
     if not applications_open:
