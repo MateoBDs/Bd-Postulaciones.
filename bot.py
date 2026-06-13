@@ -136,23 +136,23 @@ async def setup(ctx):
     global setup_message_id
     await ctx.message.delete()
 
-   embed = discord.Embed(
-    title="📋 POSTULACIÓN OFICIAL",
-    description=(
-        "**¡Gracias por tu interés en formar parte de nuestro equipo!**\n\n"
-        "Antes de comenzar, te recomendamos leer cada pregunta con atención y responder de manera clara, sincera y profesional. "
-        "Tu solicitud será evaluada por el equipo administrativo y la decisión se basará en la calidad de tus respuestas, experiencia y compromiso con la comunidad.\n\n"
-        "📌 **Requisitos Mínimos**\n\n"
-        "• Tener entre **12 y 13 años o más**.\n"
-        "• Contar con **micrófono** y dispositivos para realizar grabaciones.\n"
-        "• Tener una buena disponibilidad horaria.\n"
-        "• Demostrar madurez, humildad y respeto.\n"
-        "• Mantener una buena ortografía y redacción.\n"
-        "• Ser activo dentro del servidor y de Discord.\n\n"
-        "**Buscamos personas responsables, activas y comprometidas**, capaces de contribuir al crecimiento y bienestar de la comunidad."
-    ),
-    color=discord.Color.blue()
-)
+    embed = discord.Embed(
+        title="📋 POSTULACIÓN OFICIAL",
+        description=(
+            "**¡Gracias por tu interés en formar parte de nuestro equipo!**\n\n"
+            "Antes de comenzar, te recomendamos leer cada pregunta con atención y responder de manera clara, sincera y profesional. "
+            "Tu solicitud será evaluada por el equipo administrativo y la decisión se basará en la calidad de tus respuestas, experiencia y compromiso con la comunidad.\n\n"
+            "📌 **Requisitos Mínimos**\n\n"
+            "• Tener entre **12 y 13 años o más**.\n"
+            "• Contar con **micrófono** y dispositivos para realizar grabaciones.\n"
+            "• Tener una buena disponibilidad horaria.\n"
+            "• Demostrar madurez, humildad y respeto.\n"
+            "• Mantener una buena ortografía y redacción.\n"
+            "• Ser activo dentro del servidor y de Discord.\n\n"
+            "**Buscamos personas responsables, activas y comprometidas**, capaces de contribuir al crecimiento y bienestar de la comunidad."
+        ),
+        color=discord.Color.blue()
+    )
 
     embed.set_footer(
         text="BD Postulaciones • Sistema automático de Staff • Estado: " +
