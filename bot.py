@@ -135,12 +135,32 @@ async def on_ready():
 async def setup(ctx):
     global setup_message_id
     await ctx.message.delete()
-    embed = discord.Embed(title="BD Postulaciones", description="¡Bienvenido al sistema de Postulaciones BD! Pulsa postularse para staff para postularte exitosamente.", color=discord.Color.blue())
-    embed.set_footer(text="Estado: " + ("Abiertas" if applications_open else "Cerradas"))
+
+    embed = discord.Embed(
+        title="🛡️ BD Postulaciones — Sistema de Staff",
+        description=(
+            "Bienvenido al sistema oficial de **postulaciones del servidor BD**.\n\n"
+            "📌 Aquí podrás solicitar formar parte del equipo de **Staff**, encargado de mantener el orden y ayudar a la comunidad.\n\n"
+            "⚠️ Antes de postularte, ten en cuenta:\n"
+            "• Debes ser respetuoso y responsable.\n"
+            "• Las respuestas deben ser serias y honestas.\n"
+            "• El equipo de administración revisará cada solicitud manualmente.\n\n"
+            "🚀 Si cumples con los requisitos, pulsa el botón de abajo para comenzar tu postulación."
+        ),
+        color=discord.Color.blue()
+    )
+
+    embed.set_footer(
+        text="BD Postulaciones • Sistema automático de Staff • Estado: " +
+        ("Abiertas" if applications_open else "Cerradas")
+    )
+
     view = ApplicationView()
+
     if not applications_open:
         view.children[0].disabled = True
         view.children[0].label = "Cerradas"
+
     msg = await ctx.send(embed=embed, view=view)
     setup_message_id = msg.id
 
